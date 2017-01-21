@@ -1,5 +1,6 @@
 package com.hackfest2017.itour;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
 
 public class SignUp extends AppCompatActivity {
     LinearLayout namelayout;
@@ -22,6 +24,7 @@ public class SignUp extends AppCompatActivity {
     Button Signup_submit;
     RadioGroup rg;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +36,11 @@ public class SignUp extends AppCompatActivity {
         nametext = (EditText) findViewById(R.id.nametext);
         usernametext = (EditText) findViewById(R.id.usernametext);
         password = (EditText) findViewById(R.id.password);
-       // rdomale = (RadioButton) findViewById(R.id.radiomale);
+        // rdomale = (RadioButton) findViewById(R.id.radiomale);
         //rdofemale = (RadioButton) findViewById(R.id.radiofemale);
-        Signup_submit=(Button) findViewById(R.id.Signup_submit);
-        rg=(RadioGroup)findViewById(R.id.RG) ;
+        Signup_submit = (Button) findViewById(R.id.Signup_submit);
+        rg = (RadioGroup) findViewById(R.id.RG);
+
 
        /* if(rdomale.isChecked()){
             rdofemale.isChecked()=false;
@@ -47,15 +51,18 @@ public class SignUp extends AppCompatActivity {
         Signup_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(SignUp.this, Home.class);
+                startActivity(intent);
             }
-        });
+
+                                         }
+        );
     }
-    public void onButtonClick()
-    {
-        int id=rg.getCheckedRadioButtonId();
-        RadioButton rb=(RadioButton)findViewById(id);
-        String name= (String) rb.getText();
+
+    public void onSignUpButtonClick(){
+        int id = rg.getCheckedRadioButtonId();
+        RadioButton rb = (RadioButton) findViewById(id);
+        String name = (String) rb.getText();
     }
 
 
