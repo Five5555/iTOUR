@@ -16,9 +16,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="10dp">
 
         <Space
             android:layout_width="match_parent"
@@ -126,7 +129,7 @@
                     android:layout_alignParentStart="true">
 
                 <RadioButton
-                    android:text="RadioButton"
+                    android:text="Male"
                     android:layout_width="96dp"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -137,9 +140,11 @@
                     android:id="@+id/radioButton7" />
 
                     <RadioButton
-                        android:text="RadioButton"
+                        android:text="Female"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         android:id="@+id/radioButton9"
                         android:layout_weight="0.38" />
 
