@@ -18,8 +18,18 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(WelcomeActivity.this,SignIn.class);
-                startActivity(intent);
+                Intent sign_in_intent = new Intent(WelcomeActivity.this,SignIn.class);
+                startActivity(sign_in_intent);
+            }
+        });
+
+        Button button1 = (Button)findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent sign_up_intent = new Intent(WelcomeActivity.this,SignUp.class);
+                startActivity(sign_up_intent);
             }
         });
     }
