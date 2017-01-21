@@ -13,10 +13,10 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        Button button2 = (Button)findViewById(R.id.button2);
+        Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 Intent sign_in_intent = new Intent(WelcomeActivity.this,SignIn.class);
                 startActivity(sign_in_intent);
@@ -26,7 +26,7 @@ public class WelcomeActivity extends AppCompatActivity {
         Button button1 = (Button)findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 Intent sign_up_intent = new Intent(WelcomeActivity.this,SignUp.class);
                 startActivity(sign_up_intent);
