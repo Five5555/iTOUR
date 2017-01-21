@@ -1,14 +1,15 @@
 package com.hackfest2017.itour;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 
 public class SignUp extends AppCompatActivity {
@@ -23,6 +24,8 @@ public class SignUp extends AppCompatActivity {
     RadioButton rdofemale;
     Button Signup_submit;
     RadioGroup rg;
+    Record record;
+    TextView textView;
 
 
     @Override
@@ -36,35 +39,40 @@ public class SignUp extends AppCompatActivity {
         nametext = (EditText) findViewById(R.id.nametext);
         usernametext = (EditText) findViewById(R.id.usernametext);
         password = (EditText) findViewById(R.id.password);
+        textView = (TextView) findViewById(R.id.textView);
         // rdomale = (RadioButton) findViewById(R.id.radiomale);
         //rdofemale = (RadioButton) findViewById(R.id.radiofemale);
         Signup_submit = (Button) findViewById(R.id.Signup_submit);
         rg = (RadioGroup) findViewById(R.id.RG);
 
 
-       /* if(rdomale.isChecked()){
-            rdofemale.isChecked()=false;
-        }
-        else {
-            rdomale.isChecked() = false;
-        }*/
-        Signup_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignUp.this, Home.class);
-                startActivity(intent);
-            }
-
-                                         }
-        );
+        record = new Record(this,null,null,1,null);
+         // printDatabase();
     }
 
-    public void onSignUpButtonClick(){
+
+        public void BtnClicked(View view) {
+        Database database = new Database(usernametext.getText().toString());
+        record.insert(database);
+            Log.e("demo","before print db");
+        printDatabase();
+//            startActivity(new Intent(SignUp.));
+    }
+
+    public void printDatabase()
+    {
+        String dbstring =  record.DbToString();
+        textView.setText(dbstring);
+        Log.e("demo","print executed");
+
+    }
+
+  /*  public void onSignUpButtonClick(){
         int id = rg.getCheckedRadioButtonId();
         RadioButton rb = (RadioButton) findViewById(id);
         String name = (String) rb.getText();
     }
-
+*/
 
 
 }
