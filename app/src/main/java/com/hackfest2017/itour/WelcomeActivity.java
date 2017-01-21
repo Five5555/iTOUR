@@ -23,7 +23,7 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
 
-        Button button1 = (Button)findViewById(R.id.button1);
+        Button button1 = (Button)findViewById(R.id.button1);//button created
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
