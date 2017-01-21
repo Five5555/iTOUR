@@ -128,9 +128,6 @@
                 <RadioButton
                     android:layout_width="96dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
                     android:layout_marginLeft="16dp"
                     android:layout_marginStart="16dp"
                     android:id="@+id/radioButton7"
@@ -140,6 +137,8 @@
                         android:text="Female"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         android:id="@+id/radioButton9"
                         android:layout_weight="0.38" />
 
