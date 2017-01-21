@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.hackfest2017.itour.SignIn"
-    android:background="@android:color/holo_blue_light">
+    android:background="@android:color/holo_green_light">
 
     <EditText
         android:layout_width="wrap_content"
@@ -20,7 +20,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="111dp"
         android:id="@+id/etUserName"
-        android:hint="username" />
+        android:hint="username"
+        android:background="@android:color/background_light"
+        android:textSize="24sp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -32,7 +34,9 @@
         android:layout_alignStart="@+id/etUserName"
         android:layout_marginTop="31dp"
         android:id="@+id/etPassword"
-        android:hint="password" />
+        android:hint="password"
+        android:background="@android:color/background_light"
+        android:textSize="24sp" />
 
     <Button
         android:text="Sign In"
@@ -42,5 +46,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
         android:id="@+id/button_sign_in"
-        tools:elevation="6dp" />
+        tools:elevation="6dp"
+        android:textSize="18sp" />
 </RelativeLayout>
