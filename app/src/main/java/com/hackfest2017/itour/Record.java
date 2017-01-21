@@ -1,5 +1,6 @@
 package com.hackfest2017.itour;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
@@ -33,5 +34,29 @@ public class Record extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS" + TABLE_PRODUTCS);
         onCreate(db);
+    }
+    public void insert(database database)
+    {
+        ContentValues content = new ContentValues();
+        content.put(COLUMN_USERNAME,database.get_username());
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert(TABLE_PRODUTCS,null,content);
+        db.close();
+    }
+    public void insert1(database database)
+    {
+        ContentValues content1 = new ContentValues();
+        content1.put(COLUMN_FULLNAME,database.get_fullname());
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert(TABLE_PRODUTCS,null,content1);
+        db.close();
+    }
+    public void insert2(database database)
+    {
+        ContentValues content2= new ContentValues();
+        content2.put(COLUMN_PASSWORD,database.get_password());
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert(TABLE_PRODUTCS,null,content2);
+        db.close();
     }
 }

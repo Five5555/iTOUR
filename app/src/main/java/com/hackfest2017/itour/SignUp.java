@@ -48,15 +48,12 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
             }
         });
     }
-    public void onButtonClick()
-    {
-        int id=rg.getCheckedRadioButtonId();
-        RadioButton rb=(RadioButton)findViewById(id);
-        String name= (String) rb.getText();
-    }
+
 
 
 
